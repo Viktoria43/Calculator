@@ -3,6 +3,7 @@ import MyButton from './myButton';
 import Input from './Input';
 import Header from './Header';
 import Buttons from "./Buttons";
+import './global.css'
 
 
 export default function MyApp() {
