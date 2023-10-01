@@ -4,7 +4,7 @@ import './input-and-button.css';
 
 export default function Input() {
     return (
-        <input className="input" type="text">
+        <input className="input input-and-button" type="text">
 
         </input>
     );

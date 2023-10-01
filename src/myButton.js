@@ -6,7 +6,7 @@ import './input-and-button.css';
 export default function MyButton() {
     return (
         <div>
-        <button className="my-button" >
+        <button className="my-button input-and-button" >
        DEL
         </button>
     <button className="my-button" >
