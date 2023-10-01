@@ -13,8 +13,7 @@ export default function MyApp() {
             <div className="input-and-button">
                 <div className="my-input">
                     <Input/>
-
-                        <MyButton/>
+                    <MyButton/>
                     </div>
 
             </div>
