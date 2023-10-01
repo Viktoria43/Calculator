@@ -2,6 +2,7 @@ import './Calculator.css';
 import MyButton from './myButton';
 import Input from './Input';
 import Header from './Header';
+import Buttons from "./Buttons";
 
 
 export default function MyApp() {
@@ -11,11 +12,12 @@ export default function MyApp() {
                 <Header/>
             </div>
             <div className="input-and-button">
-                <div className="my-input">
+
                     <Input/>
                     <MyButton/>
-                    </div>
-
+            </div>
+            <div className= "buttons-container">
+                <Buttons/>
             </div>
         </div>
     );
