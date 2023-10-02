@@ -15,7 +15,7 @@ export default function Buttons(props) {
     return (
 
         <div className="buttons-container">
-            <button onClick={()=>{props.setValue(props.value + 7)}}  className="my-button number">
+            <button onClick={()=>{props.setValue(props.value + 7)}} className="my-button number">
                 7
             </button>
 
@@ -26,7 +26,7 @@ export default function Buttons(props) {
             <button onClick={()=>{props.setValue(props.value + 9)}} className="my-button number">
                 9
             </button>
-            <button  onClick={()=>{props.setValue("%")}} className="my-button symbol">
+            <button  onClick={()=>{props.setValue(props.value+"%")}} className="my-button symbol">
                 %
             </button>
             <button onClick={()=>{props.setValue(props.value+4)}}   className="my-button number">
@@ -38,7 +38,7 @@ export default function Buttons(props) {
             <button onClick={()=>{props.setValue(props.value+6)}}   className="my-button number">
                 6
             </button>
-            <button  onClick={()=>{props.setValue("-")}} className="my-button symbol">
+            <button  onClick={()=>{props.setValue(props.value+"-")}} className="my-button symbol">
                 -
             </button>
             <button onClick={()=>{props.setValue(props.value+1)}} className="my-button number">
@@ -50,7 +50,7 @@ export default function Buttons(props) {
             <button onClick={()=>props.setValue(props.value+3)}   className="my-button number">
                 3
             </button>
-            <button onClick={()=>{props.setValue("*")}}   className="my-button symbol">
+            <button onClick={()=>{props.setValue(props.value+"*")}}   className="my-button symbol">
                 X
             </button>
             <button  onClick={()=>{props.setValue("+")}} className="my-button symbol">
