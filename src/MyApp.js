@@ -4,8 +4,10 @@ import Input from './Input';
 import Header from './Header';
 import Buttons from "./Buttons";
 import './global.css'
+import {useState} from "react";
 
- function MyApp(props) {
+function MyApp() {
+    const [value,setValue] = useState("");
     return(
         <div className="Calculator">
             <div>
@@ -13,11 +15,11 @@ import './global.css'
             </div>
             <div className="input-and-button">
 
-                    <Input/>
-                    <MyButton />
+                    <Input  value={value}/>
+                    <MyButton setValue={setValue} />
             </div>
             <div className= "buttons-container">
-                <Buttons/>
+                <Buttons setValue={setValue} value={value}/>
             </div>
         </div>
     );
