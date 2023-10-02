@@ -1,60 +1,16 @@
-import React from "react";
+
 import './buttons-container.css';
 import './number.css';
 import './symbol.css';
+const buttons = [7,8,9,"%",4,5,6,"-",1,2,3,"X",".",0,"/","="]
 export default function Buttons() {
+
     return (
+
         <div className="buttons-container">
-
-            <button className="my-button number">
-                7
-            </button>
-
-            <button  className="my-button number">
-                8
-            </button>
-            <button className="my-button number">
-                9
-            </button>
-            <button   className="my-button symbol">
-                %
-            </button>
-            <button   className="my-button number">
-                4
-            </button>
-            <button   className="my-button number">
-                5
-            </button>
-            <button   className="my-button number">
-                6
-            </button>
-            <button   className="my-button symbol">
-                -
-            </button>
-            <button   className="my-button number">
-                1
-            </button>
-            <button   className="my-button number">
-                2
-            </button>
-            <button   className="my-button number">
-                3
-            </button>
-            <button   className="my-button symbol">
-                X
-            </button>
-            <button   className="my-button symbol">
-                .
-            </button>
-            <button   className="my-button number">
-                0
-            </button>
-            <button   className="my-button symbol">
-                /
-            </button>
-            <button   className="my-button symbol">
-                =
-            </button>
+            {buttons.map((button,index) => (
+                <button key={index} className={`my-button ${typeof button === "number" ? "number" : "symbol"}`} >{button}</button>
+            ))}
         </div>
 
 

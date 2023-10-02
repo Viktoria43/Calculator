@@ -5,9 +5,8 @@ import Header from './Header';
 import Buttons from "./Buttons";
 import './global.css'
 
-
-export default function MyApp() {
-    return (
+ function MyApp(props) {
+    return(
         <div className="Calculator">
             <div>
                 <Header/>
@@ -15,7 +14,7 @@ export default function MyApp() {
             <div className="input-and-button">
 
                     <Input/>
-                    <MyButton/>
+                    <MyButton />
             </div>
             <div className= "buttons-container">
                 <Buttons/>
@@ -23,3 +22,4 @@ export default function MyApp() {
         </div>
     );
 }
+export default  MyApp;
