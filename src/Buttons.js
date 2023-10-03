@@ -1,26 +1,32 @@
 
+import React from 'react';
 import './buttons-container.css';
 import './number.css';
 import './symbol.css';
-import {Input} from './Input';
-import button from "bootstrap/js/src/button";
-import {useState} from "react";
-import {inpuButton} from './inputButton.js';
-
 
 export default function Buttons(props) {
+    function calculate(expression) {
+        try {
 
+            return eval(expression);
+        } catch (error) {
 
+            return 'Error';
+        }
+    }
+
+    const handleEqualClick = () => {
+        const result = calculate(props.value);
+        props.setValue(result.toString());
+    };
 
     return (
-
         <div className="buttons-container">
-            <button onClick={()=>{props.setValue(props.value + 7)}} className="my-button number">
+            <button onClick={() => props.setValue(props.value + 7)} className="my-button number">
                 7
             </button>
 
-
-            <button onClick={()=>{props.setValue(props.value + 8)}} className="my-button number">
+            <button onClick={() => props.setValue(props.value + 8)} className="my-button number">
                 8
             </button>
             <button onClick={()=>{props.setValue(props.value + 9)}} className="my-button number">
@@ -59,10 +65,10 @@ export default function Buttons(props) {
             <button onClick={()=>{props.setValue(props.value+0)}}  className="my-button number">
                 0
             </button>
-            <button   className="my-button symbol">
+            <button  onClick={()=>{props.setValue(props.value+"/")}}  className="my-button symbol">
                 /
             </button>
-            <button   className="my-button symbol">
+            <button  onClick={handleEqualClick} className="my-button symbol">
                 =
             </button>
         </div>
