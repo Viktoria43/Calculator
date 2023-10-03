@@ -11,7 +11,8 @@ export default function Buttons(props) {
             return eval(expression);
         } catch (error) {
 
-            return 'Error';
+            return 'Err, DEL';
+
         }
     }
 
