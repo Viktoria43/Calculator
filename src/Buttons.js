@@ -5,8 +5,10 @@ import './number.css';
 import './symbol.css';
 
 export default function Buttons(props) {
+
     function calculate(expression) {
         try {
+
 
             return eval(expression);
         } catch (error) {
@@ -60,7 +62,7 @@ export default function Buttons(props) {
             <button onClick={()=>{props.setValue(props.value+"*")}}   className="my-button symbol">
                 X
             </button>
-            <button  onClick={()=>{props.setValue("+")}} className="my-button symbol">
+            <button  onClick={()=>{props.setValue(props.value+"+")}} className="my-button symbol">
                 +
             </button>
             <button onClick={()=>{props.setValue(props.value+0)}}  className="my-button number">
